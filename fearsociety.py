@@ -70,9 +70,9 @@ def SendView(item_id):
                 impr_id = req.json()["log_pb"]["impr_id"]
                 TotalSendedShare += 1
                 if DebugMode == True:
-                    print(Colorate.Horizontal(Colors.red_to_pink, f"Partage envoyés: {TotalSendedShare} ({impr_id})"))
+                    print(Colorate.Horizontal(Colors.purple_to_blue, f"Partage envoyés: {TotalSendedShare} ({impr_id})"))
                 else:
-                    print(Colorate.Horizontal(Colors.red_to_purple, f"Partage envoyés: {TotalSendedShare} ({impr_id})"))
+                    print(Colorate.Horizontal(Colors.blue_to_purple, f"Partage envoyés: {TotalSendedShare} ({impr_id})"))
                     Title(f"Thread :{str(active_count()-1)} / Hit :{TotalSendedShare} / Fail :{TotalFailedReq}")
             else:
                 pass
@@ -99,12 +99,12 @@ if (__name__ == "__main__"):
 ██║     ███████╗██║  ██║██║  ██║    ███████║╚██████╔╝╚██████╗██║███████╗   ██║      ██║   
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝  ╚═════╝╚═╝╚══════╝   ╚═╝      ╚═╝                                                                                            
     """)
-    itemID       = Write.Input("created by init1 < init1#74933\npress enter", Colors.blue_to_purple, interval=0.0001)
-    itemID       = Write.Input("Link Video > ", Colors.blue_to_purple, interval=0.0001)
-    amount       = Write.Input("Amount (0=infinity) > ", Colors.blue_to_purple, interval=0.0001)
-    NThread      = Write.Input("Thread par seconde > ", Colors.blue_to_purple, interval=0.0001)
+    print(Colorate.Horizontal(Colors.red_to_purple, f"created by init1 < init1#74933"))
+    itemID       = Write.Input("Link Video >. ", Colors.red_to_purple, interval=0.0001)
+    amount       = Write.Input("Amount (0=infinity) >. ", Colors.red_to_purple, interval=0.0001)
+    NThread      = Write.Input("Thread par seconde >. ", Colors.red_to_purple, interval=0.0001)
     if Title("Mini proxy scrape by init") == True:
-        Debug = Write.Input("Debug Fails [y/n] ? > ", Colors.red_to_purple, interval=0.0001)
+        Debug = Write.Input("Debug Fails [y/n] ? >. ", Colors.red_to_purple, interval=0.0001)
         if Debug.lower().startswith("y"):
             DebugMode = True
         else:
